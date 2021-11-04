@@ -9,18 +9,17 @@ public class Club {
     private String adress;
     private Integer age;
     private String actualDiv;
+    private int pointsExp;
 
     //methods
-    public Club(String name, String adress, Integer age, String actualDiv) {
+    public Club(String name, String adress, Integer age, String actualDiv, int pointsExp) {
 
         this.name = name;
         this.adress = adress;
         this.age = age;
         this.actualDiv = actualDiv;
+        this.pointsExp = pointsExp;
 
-        /*FirstTeam firstTeam = new FirstTeam(11, "team tactics", 80);
-        Stadium stadium = new Stadium("Old trafford", 80000);
-        TalentRecruiter talentRecruiter = new TalentRecruiter("England");*/
     }
 
     //getters

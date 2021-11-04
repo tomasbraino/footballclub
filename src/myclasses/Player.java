@@ -28,6 +28,14 @@ public class Player extends Person {
         return "the player is talking with his partner";
     }
 
+    @Override
+    public String toString() {
+        return "Field position: "+getFieldPosition()+"\n"+
+                "Field position 2: "+getFieldPosition2()+"\n"+
+                "Height: "+getHeight()+"\n"+
+                "weight: "+getWeight();
+    }
+
     //getters & setters
 
     public String getFieldPosition() {

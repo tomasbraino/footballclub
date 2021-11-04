@@ -1,10 +1,11 @@
 package myclasses;
 
+
 public abstract class Person {
     //atributes
-    protected String name;
-    protected Integer phoneNumber;
-    protected Integer id;
+    private String name;
+    private Integer phoneNumber;
+    private Integer id;
 
     //methods
 
@@ -48,8 +49,10 @@ public abstract class Person {
         return "I'm talking with someone";
     }
 
-    public void getData() {
-
+    @Override
+    public String toString() {
+        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
+                "\n" + "id: " + getId();
     }
 
 
