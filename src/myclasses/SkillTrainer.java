@@ -11,6 +11,23 @@ public class SkillTrainer extends Person {
         this.yearExp = yearExp;
     }
 
+    @Override
+    public String toString() {
+        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
+                "\n" + "id: " + getId() + "\n" + "Specialist on: " + getSpecialist() + "\n" +
+                "years of experience: " + getYearExp();
+    }
+
+    @Override
+    public String run() {
+        return "running with the team";
+    }
+
+    @Override
+    public String talk() {
+        return "talk about goalkeeper routine";
+    }
+
     public String getSpecialist() {
         return specialist;
     }

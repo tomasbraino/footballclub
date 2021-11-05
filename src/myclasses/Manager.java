@@ -10,7 +10,7 @@ public class Manager extends Person {
     //methods
 
     public Manager(String name, Integer phoneNumber, Integer id, Integer experience, String footballTactic) {
-        super(name, phoneNumber,id);
+        super(name, phoneNumber, id);
         this.experience = experience;
         this.footballTactic = footballTactic;
     }
@@ -27,6 +27,13 @@ public class Manager extends Person {
 
     public String trainPlayers() {
         return "Training his players";
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
+                "\n" + "id: " + getId() + "Expeience: " + getExperience() + "\n" +
+                "tactic: " + getFootballTactic();
     }
 
 

@@ -10,6 +10,16 @@ public class TalentRecruiter extends Person {
     }
 
     @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
     public String run() {
         return "running";
     }
@@ -17,6 +27,12 @@ public class TalentRecruiter extends Person {
     @Override
     public String talk() {
         return "Talking about young talents with the CEO of the club";
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
+                "\n" + "id: " + getId() + "\n" + "country assignment: " + getCountryResearch();
     }
 
     public String getCountryResearch() {

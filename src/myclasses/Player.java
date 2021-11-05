@@ -30,10 +30,10 @@ public class Player extends Person {
 
     @Override
     public String toString() {
-        return "Field position: "+getFieldPosition()+"\n"+
-                "Field position 2: "+getFieldPosition2()+"\n"+
-                "Height: "+getHeight()+"\n"+
-                "weight: "+getWeight();
+        return "Field position: " + getFieldPosition() + "\n" +
+                "Field position 2: " + getFieldPosition2() + "\n" +
+                "Height: " + getHeight() + "\n" +
+                "weight: " + getWeight();
     }
 
     //getters & setters

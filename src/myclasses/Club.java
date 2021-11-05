@@ -22,6 +22,33 @@ public class Club {
 
     }
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (obj instanceof Club) {
+            Club club = (Club) obj;
+
+            if (this.pointsExp == club.pointsExp) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     //getters
 
     public String getName() {
@@ -38,6 +65,14 @@ public class Club {
 
     public String getActualDiv() {
         return actualDiv;
+    }
+
+    public int getPointsExp() {
+        return pointsExp;
+    }
+
+    public void setPointsExp(int pointsExp) {
+        this.pointsExp = pointsExp;
     }
 
     //setters
