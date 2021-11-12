@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class FirstTeam {
     private int numPlayer;
     private String teamSheet;
@@ -11,9 +13,18 @@ public class FirstTeam {
         this.avgPlayer = avgPlayer;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FirstTeam firstTeam = (FirstTeam) o;
+        return avgPlayer == firstTeam.avgPlayer;
+    }
 
-
-
+    @Override
+    public int hashCode() {
+        return hashCode() + avgPlayer;
+    }
 
     public int getNumPlayer() {
         return numPlayer;

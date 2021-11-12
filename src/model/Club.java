@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Club {
 
     //atributes
@@ -21,32 +23,17 @@ public class Club {
     }
 
     @Override
-    public int hashCode() {
-        return hashCode() + pointsExp;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Club club = (Club) o;
+        return pointsExp == club.pointsExp && Objects.equals(actualDiv, club.actualDiv);
     }
 
     @Override
-    public boolean equals(Object obj) {
-
-        // If the object is compared with itself then return true
-        if (obj == this) {
-            return true;
-        }
-
-        /* Check if obj is an instance of Club or not
-          "null instanceof [type]" also returns false */
-        if (!(obj instanceof Club)) {
-            return false;
-        }
-
-        // typecast obj to Club so that we can compare data members
-        Club club = (Club) obj;
-
-        // Compare the data members and return accordingly
-        return Double.compare(re, c.re) == 0
-                && Double.compare(im, c.im) == 0;
+    public int hashCode() {
+        return Objects.hash(actualDiv, pointsExp);
     }
-
 
     @Override
     public String toString() {
