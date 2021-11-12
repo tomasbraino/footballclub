@@ -1,10 +1,10 @@
-package myclasses;
+package model;
 
 public class TalentRecruiter extends Person {
 
     private String countryResearch;
 
-    public TalentRecruiter(String name, Integer phoneNumber, Integer id, String countryResearch) {
+    public TalentRecruiter(String name, int phoneNumber, int id, String countryResearch) {
         super(name, phoneNumber, id);
         this.countryResearch = countryResearch;
     }
@@ -12,7 +12,7 @@ public class TalentRecruiter extends Person {
     @Override
     public int hashCode() {
         return super.hashCode();
-    }
+    } //correct this
 
     @Override
     public boolean equals(Object obj) {
@@ -20,8 +20,8 @@ public class TalentRecruiter extends Person {
     }
 
     @Override
-    public String run() {
-        return "running";
+    public String listen() {
+        return "listening to the requirements of the manager";
     }
 
     @Override
@@ -31,8 +31,7 @@ public class TalentRecruiter extends Person {
 
     @Override
     public String toString() {
-        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
-                "\n" + "id: " + getId() + "\n" + "country assignment: " + getCountryResearch();
+        return super.toString() + "country assignment: " + getCountryResearch();
     }
 
     public String getCountryResearch() {

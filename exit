@@ -1,0 +1,29 @@
+[33mcommit e7352c42a9852db55004bbe6f7c51659908271a6[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Tomas Brainovich <tbrainovich@hotmail.com>
+Date:   Thu Nov 4 21:50:29 2021 -0300
+
+    Logic added to the project. Methods toString(), equals() and hashcode() added too
+
+[33mcommit 41e6cfdaa7e41d96b675081ba0c1dc03f34677b0[m
+Author: Tomas Brainovich <tbrainovich@hotmail.com>
+Date:   Thu Nov 4 10:59:19 2021 -0300
+
+    Class Person, club and player edit
+
+[33mcommit 7cb72513a7d43ce4ae218044ca5a9e7db767d082[m
+Author: Tomas Brainovich <tbrainovich@hotmail.com>
+Date:   Wed Nov 3 19:17:03 2021 -0300
+
+    classDiagram file for object design
+
+[33mcommit 09ad2f6289cb4f9d29a2058967348baaad0087f6[m
+Author: Tomas Brainovich <tbrainovich@hotmail.com>
+Date:   Tue Nov 2 17:21:52 2021 -0300
+
+    First commit
+
+[33mcommit ba373c52cd5d9e8bc662f0cbdee7a7553664e3d4[m
+Author: Tomás Brainovich <39624491+tomasbraino@users.noreply.github.com>
+Date:   Tue Nov 2 15:23:36 2021 -0300
+
+    Initial commit

@@ -1,29 +1,43 @@
-package myclasses;
+package model;
 
+import java.util.Objects;
 
 public abstract class Person {
     //atributes
     private String name;
-    private Integer phoneNumber;
-    private Integer id;
+    private int phoneNumber;
+    private int id;
 
     //methods
 
-    public Person(String name, Integer phoneNumber, Integer id) {
+    public Person(String name, int phoneNumber, int id) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.id = id;
     }
 
+    abstract String listen();
+
+    abstract String talk();
+
+    @Override
+    public String toString() {
+        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
+                "\n" + "id: " + getId();
+    }
+
+    //add hashCode() and equals() methods
+
+
     public String getName() {
         return name;
     }
 
-    public Integer getPhoneNumber() {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -38,22 +52,5 @@ public abstract class Person {
     public void setId(Integer id) {
         this.id = id;
     }
-
-    public String run() {
-
-        return "I'm running";
-    }
-
-    public String talk() {
-
-        return "I'm talking with someone";
-    }
-
-    @Override
-    public String toString() {
-        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
-                "\n" + "id: " + getId();
-    }
-
 
 }

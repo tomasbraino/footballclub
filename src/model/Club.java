@@ -1,18 +1,16 @@
-package myclasses;
-
-import java.util.Date;
+package model;
 
 public class Club {
 
     //atributes
     private String name;
     private String adress;
-    private Integer age;
+    private int age;
     private String actualDiv;
     private int pointsExp;
 
     //methods
-    public Club(String name, String adress, Integer age, String actualDiv, int pointsExp) {
+    public Club(String name, String adress, int age, String actualDiv, int pointsExp) {
 
         this.name = name;
         this.adress = adress;
@@ -24,29 +22,37 @@ public class Club {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return hashCode() + pointsExp;
     }
 
     @Override
     public boolean equals(Object obj) {
 
-        if (obj instanceof Club) {
-            Club club = (Club) obj;
+        // If the object is compared with itself then return true
+        if (obj == this) {
+            return true;
+        }
 
-            if (this.pointsExp == club.pointsExp) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
+        /* Check if obj is an instance of Club or not
+          "null instanceof [type]" also returns false */
+        if (!(obj instanceof Club)) {
             return false;
         }
+
+        // typecast obj to Club so that we can compare data members
+        Club club = (Club) obj;
+
+        // Compare the data members and return accordingly
+        return Double.compare(re, c.re) == 0
+                && Double.compare(im, c.im) == 0;
     }
 
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Name: " + getName() + "\n" + "Adress: " + getAdress() +
+                "\n" + "Age: " + getAge() + "\n" + "Actual div: " + getActualDiv() +
+                "\n" + "Points in the tournament: " + getPointsExp();
     }
 
     //getters
@@ -59,7 +65,7 @@ public class Club {
         return adress;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
@@ -85,7 +91,7 @@ public class Club {
         this.adress = adress;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 

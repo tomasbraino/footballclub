@@ -1,15 +1,15 @@
-package myclasses;
+package model;
 
-public class Player extends Person {
+public abstract class Player extends Person {
 
     private String fieldPosition;
-    private Integer height;
-    private Integer weight;
+    private int height;
+    private int weight;
     private String fieldPosition2;
 
     //methods
 
-    public Player(String name, Integer phoneNumber, Integer id, String fieldPosition, Integer height, Integer weight, String fieldPosition2) {
+    public Player(String name, int phoneNumber, int id, String fieldPosition, int height, int weight, String fieldPosition2) {
         super(name, phoneNumber, id);
 
         this.fieldPosition = fieldPosition;
@@ -19,18 +19,18 @@ public class Player extends Person {
     }
 
     @Override
-    public String run() {
-        return "the player is running with the ball";
+    String listen() {
+        return "the player is lestening what his manager says";
     }
 
     @Override
-    public String talk() {
+    String talk() {
         return "the player is talking with his partner";
     }
 
     @Override
     public String toString() {
-        return "Field position: " + getFieldPosition() + "\n" +
+        return super.toString() + "Field position: " + getFieldPosition() + "\n" +
                 "Field position 2: " + getFieldPosition2() + "\n" +
                 "Height: " + getHeight() + "\n" +
                 "weight: " + getWeight();
@@ -42,11 +42,11 @@ public class Player extends Person {
         return fieldPosition;
     }
 
-    public Integer getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public Integer getWeight() {
+    public int getWeight() {
         return weight;
     }
 
@@ -58,11 +58,11 @@ public class Player extends Person {
         this.fieldPosition = fieldPosition;
     }
 
-    public void setHeight(Integer height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
-    public void setWeight(Integer weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 

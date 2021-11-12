@@ -1,12 +1,12 @@
-package myclasses;
+package model;
 
 public class Fans extends Person {
 
-    private Integer fanId;
+    private int fanId;
     private String stadiumSector;
 
     //methods
-    public Fans(String name, Integer phoneNumber, Integer id, Integer fanId, String stadiumSector) {
+    public Fans(String name, int phoneNumber, int id, int fanId, String stadiumSector) {
         super(name, phoneNumber, id);
         this.fanId = fanId;
         this.stadiumSector = stadiumSector;
@@ -14,8 +14,7 @@ public class Fans extends Person {
 
     @Override
     public String toString() {
-        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
-                "\n" + "id: " + getId()+ "\n" +"fan id: "+ getFanId() + "\n" +
+        return super.toString() + "\n" + "fan id: " + getFanId() + "\n" +
                 "Stadium sector: " + getStadiumSector();
     }
 
@@ -30,13 +29,13 @@ public class Fans extends Person {
     }
 
     @Override
-    public String run() {
-        return "Running to get tickets for the next match";
+    String listen() {
+        return "listening to the stadium songs";
     }
 
     @Override
-    public String talk() {
-        return "Talk after the game with other fans";
+    String talk() {
+        return "talking with the other fans about the match";
     }
 
     public String sing() {
@@ -48,7 +47,7 @@ public class Fans extends Person {
         return fanId;
     }
 
-    public void setFanId(Integer fanId) {
+    public void setFanId(int fanId) {
         this.fanId = fanId;
     }
 

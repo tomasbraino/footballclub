@@ -1,21 +1,25 @@
-package myclasses;
+package model;
 
 public class FirstTeam {
-    private Integer numPlayer;
+    private int numPlayer;
     private String teamSheet;
-    private Integer avgPlayer;
+    private int avgPlayer;
 
-    public FirstTeam(Integer numPlayer, String teamSheet, Integer avgPlayer) {
+    public FirstTeam(int numPlayer, String teamSheet, int avgPlayer) {
         this.numPlayer = numPlayer;
         this.teamSheet = teamSheet;
         this.avgPlayer = avgPlayer;
     }
 
-    public Integer getNumPlayer() {
+
+
+
+
+    public int getNumPlayer() {
         return numPlayer;
     }
 
-    public void setNumPlayer(Integer numPlayer) {
+    public void setNumPlayer(int numPlayer) {
         this.numPlayer = numPlayer;
     }
 
@@ -27,11 +31,11 @@ public class FirstTeam {
         this.teamSheet = teamSheet;
     }
 
-    public Integer getAvgPlayer() {
+    public int getAvgPlayer() {
         return avgPlayer;
     }
 
-    public void setAvgPlayer(Integer avgPlayer) {
+    public void setAvgPlayer(int avgPlayer) {
         this.avgPlayer = avgPlayer;
     }
 

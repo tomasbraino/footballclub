@@ -1,23 +1,23 @@
-package myclasses;
+package model;
 
 public class Manager extends Person {
 
     //atributes
 
-    private Integer experience;
+    private int experience;
     private String footballTactic;
 
     //methods
 
-    public Manager(String name, Integer phoneNumber, Integer id, Integer experience, String footballTactic) {
+    public Manager(String name, int phoneNumber, int id, int experience, String footballTactic) {
         super(name, phoneNumber, id);
         this.experience = experience;
         this.footballTactic = footballTactic;
     }
 
     @Override
-    public String run() {
-        return "Running and celebrate when their team scores";
+    public String listen() {
+        return "The manager is listening to the press conference";
     }
 
     @Override
@@ -26,19 +26,18 @@ public class Manager extends Person {
     }
 
     public String trainPlayers() {
-        return "Training his players";
+        return "General training for his players";
     }
 
     @Override
     public String toString() {
-        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
-                "\n" + "id: " + getId() + "Expeience: " + getExperience() + "\n" +
+        return super.toString() + "Experience: " + getExperience() + "\n" +
                 "tactic: " + getFootballTactic();
     }
 
 
     //getters & setters
-    public Integer getExperience() {
+    public int getExperience() {
         return experience;
     }
 
@@ -46,7 +45,7 @@ public class Manager extends Person {
         return footballTactic;
     }
 
-    public void setExperience(Integer experience) {
+    public void setExperience(int experience) {
         this.experience = experience;
     }
 

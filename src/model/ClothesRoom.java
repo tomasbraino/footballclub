@@ -1,9 +1,9 @@
-package myclasses;
+package model;
 
 public class ClothesRoom {
 
     private String name;
-    private Integer amountLocker;
+    private int amountLocker;
 
     //methods
     public ClothesRoom() {
@@ -18,11 +18,11 @@ public class ClothesRoom {
         this.name = name;
     }
 
-    public Integer getAmountLocker() {
+    public int getAmountLocker() {
         return amountLocker;
     }
 
-    public void setAmountLocker(Integer amountLocker) {
+    public void setAmountLocker(int amountLocker) {
         this.amountLocker = amountLocker;
     }
 }

@@ -1,4 +1,4 @@
-package myclasses;
+package model;
 
 public class Sponsor {
 

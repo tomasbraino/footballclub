@@ -1,10 +1,10 @@
-package myclasses;
+package model;
 
 public class Sector {
 
     private String name;
-    private Integer id;
-    private Integer amountPlaces;
+    private int id;
+    private int amountPlaces;
 
     public Sector(String name, Integer id, Integer amountPlaces) {
         this.name = name;
@@ -21,11 +21,11 @@ public class Sector {
         this.name = name;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 }

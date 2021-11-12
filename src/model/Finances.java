@@ -1,10 +1,10 @@
-package myclasses;
+package model;
 
 public class Finances {
 
     private Float budget;
-    private Integer salaries;
-    private Integer debts;
+    private int salaries;
+    private int debts;
 
     //methods
     public Finances() {
@@ -19,23 +19,23 @@ public class Finances {
         this.budget = budget;
     }
 
-    public Integer getSalaries() {
+    public int getSalaries() {
         return salaries;
     }
 
-    public void setSalaries(Integer salaries) {
+    public void setSalaries(int salaries) {
         this.salaries = salaries;
     }
 
-    public Integer getDebts() {
+    public int getDebts() {
         return debts;
     }
 
-    public void setDebts(Integer debts) {
+    public void setDebts(int debts) {
         this.debts = debts;
     }
 
-    public Integer paySalaries() {
+    public int paySalaries() {
         return salaries;
     }
 

@@ -1,11 +1,11 @@
-package myclasses;
+package model;
 
-public class SkillTrainer extends Person {
+public class SkillTrainer extends Person implements Training {
 
     private String specialist;
     private int yearExp;
 
-    public SkillTrainer(String name, Integer phoneNumber, Integer id, String specialist, int yearExp) {
+    public SkillTrainer(String name, int phoneNumber, int id, String specialist, int yearExp) {
         super(name, phoneNumber, id);
         this.specialist = specialist;
         this.yearExp = yearExp;
@@ -13,19 +13,33 @@ public class SkillTrainer extends Person {
 
     @Override
     public String toString() {
-        return "Name: " + "\n" + getName() + "\n" + "phone number: " + "\n" + getPhoneNumber() +
-                "\n" + "id: " + getId() + "\n" + "Specialist on: " + getSpecialist() + "\n" +
+        return super.toString() + "\n" + "Specialist on: " + getSpecialist() + "\n" +
                 "years of experience: " + getYearExp();
     }
 
     @Override
-    public String run() {
+    public String listen() {
         return "running with the team";
     }
 
     @Override
     public String talk() {
         return "talk about goalkeeper routine";
+    }
+
+    @Override
+    public void physicalSession() {
+        System.out.println("Today we must to run and go to the gym");
+    }
+
+    @Override
+    public void basicSkills() {
+        System.out.println("Today's practice it's about basic skills");
+    }
+
+    @Override
+    public void miniMatch() {
+        System.out.println("We are gonna play a mini match with the 2nd team");
     }
 
     public String getSpecialist() {
