@@ -1,5 +1,7 @@
 package com.solvd.footballclub.model;
 
+import com.solvd.footballclub.interfaces.Attack;
+
 import java.util.Objects;
 
 public class Striker extends Player implements Attack {
@@ -40,12 +42,12 @@ public class Striker extends Player implements Attack {
     }
 
     @Override
-    String listen() {
+    public String listen() {
         return "running for score a goal";
     }
 
     @Override
-    String talk() {
+    public String talk() {
         return "the striker is talking to his teammates";
     }
 

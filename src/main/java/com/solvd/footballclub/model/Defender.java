@@ -1,5 +1,7 @@
 package com.solvd.footballclub.model;
 
+import com.solvd.footballclub.interfaces.Defense;
+
 import java.util.Objects;
 
 public class Defender extends Player implements Defense {

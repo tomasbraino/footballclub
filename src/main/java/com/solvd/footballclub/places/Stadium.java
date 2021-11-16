@@ -1,4 +1,9 @@
-package com.solvd.footballclub.model;
+package com.solvd.footballclub.places;
+
+import com.solvd.footballclub.exceptions.FanMemership;
+import com.solvd.footballclub.interfaces.StadiumIn;
+
+import java.util.Scanner;
 
 public class Stadium implements StadiumIn {
 
@@ -10,7 +15,6 @@ public class Stadium implements StadiumIn {
         this.name = name;
         this.capacity = capacity;
     }
-
 
 
     public String getName() {
@@ -40,10 +44,18 @@ public class Stadium implements StadiumIn {
     }
 
     @Override
-    public void controlFans() {
+    public void controlFans() throws FanMemership {
 
+        //FanMemership Exception uses
+        Scanner scan = new Scanner(System.in);
+        boolean status = scan.nextBoolean();
 
-        System.out.println("Dear fans, please check your fanId");
+        if (status) {
+            System.out.println("This fan can enter to the stadium");
+        } else {
+            throw new FanMemership("this fan can not enter to the stadium");
+        }
+
     }
 
     @Override

@@ -14,9 +14,9 @@ public abstract class Person {
         this.id = id;
     }
 
-    abstract String listen();
+    public abstract String listen();
 
-    abstract String talk();
+    public abstract String talk();
 
     @Override
     public String toString() {

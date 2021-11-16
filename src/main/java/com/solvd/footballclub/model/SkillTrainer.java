@@ -1,5 +1,7 @@
 package com.solvd.footballclub.model;
 
+import com.solvd.footballclub.interfaces.Training;
+
 public class SkillTrainer extends Person implements Training {
 
     private String specialist;

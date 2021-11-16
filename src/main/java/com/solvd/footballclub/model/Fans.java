@@ -29,13 +29,13 @@ public class Fans extends Person {
     }
 
     @Override
-    String listen() {
-        return "listening to the stadium songs";
+    public String listen() {
+        return "listening the stadium voice";
     }
 
     @Override
-    String talk() {
-        return "talking with the other fans about the match";
+    public String talk() {
+        return "Fans talking with their pairs";
     }
 
     public String sing() {
@@ -58,4 +58,7 @@ public class Fans extends Person {
     public void setStadiumSector(String stadiumSector) {
         this.stadiumSector = stadiumSector;
     }
+
+
+
 }

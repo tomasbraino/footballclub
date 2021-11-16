@@ -1,4 +1,4 @@
-package com.solvd.footballclub.model;
+package com.solvd.footballclub.employees;
 
 public class MedicalTeam {
 

@@ -1,4 +1,4 @@
-package com.solvd.footballclub.model;
+package com.solvd.footballclub.interfaces;
 
 public interface Attack {
     abstract void freeKick();

@@ -1,4 +1,7 @@
-package com.solvd.footballclub.model;
+package com.solvd.footballclub.employees;
+
+import com.solvd.footballclub.exceptions.PlayerTransfer;
+import com.solvd.footballclub.model.Person;
 
 import java.util.Objects;
 
@@ -14,7 +17,7 @@ public class TalentRecruiter extends Person {
     @Override
     public int hashCode() {
         return Objects.hashCode(countryResearch);
-    }
+    }//Correct my hashCode() needs to be custom
 
     @Override
     public boolean equals(Object obj) {
@@ -43,4 +46,10 @@ public class TalentRecruiter extends Person {
     public void setCountryResearch(String countryResearch) {
         this.countryResearch = countryResearch;
     }
+
+    public static void talentTravel()throws PlayerTransfer{
+
+    }
+
+
 }

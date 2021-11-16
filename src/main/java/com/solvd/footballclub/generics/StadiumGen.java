@@ -1,10 +1,10 @@
-package com.solvd.footballclub.model;
+package com.solvd.footballclub.generics;
 
 public class StadiumGen<Sector, Capacity, Rooms> {
 
-    Sector sec;
-    Capacity cap;
-    Rooms rooms;
+    private Sector sec;
+    private Capacity cap;
+    private Rooms rooms;
 
     public StadiumGen(Sector sec, Capacity cap, Rooms rooms) {
         this.sec = sec;

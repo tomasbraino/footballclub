@@ -1,6 +1,8 @@
 
 package com.solvd.footballclub.model;
 
+import com.solvd.footballclub.interfaces.MidelFielderSkills;
+
 import java.util.Objects;
 
 public class Midfielder extends Player implements MidelFielderSkills {

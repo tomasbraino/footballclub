@@ -1,8 +1,8 @@
-package com.solvd.footballclub.model;
+package com.solvd.footballclub.generics;
 
 public class PlayerGen<Player> {
 
-    Player p;
+    private Player p;
 
     public void getPlayer(Player p) {
         System.out.println(p);

@@ -1,6 +1,8 @@
 
 package com.solvd.footballclub.model;
 
+import com.solvd.footballclub.interfaces.GoalkeeperI;
+
 import java.util.Objects;
 
 public class Goalkeeper extends Player implements GoalkeeperI {
@@ -18,12 +20,12 @@ public class Goalkeeper extends Player implements GoalkeeperI {
     }
 
     @Override
-    String listen() {
+    public String listen() {
         return "the goalkeeper runs to catch the ball";
     }
 
     @Override
-    String talk() {
+    public String talk() {
         return "the goalkeeper is talking to his defenders";
     }
 

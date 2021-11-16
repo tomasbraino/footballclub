@@ -1,4 +1,6 @@
-package com.solvd.footballclub.model;
+package com.solvd.footballclub.places;
+
+import com.solvd.footballclub.exceptions.FinancesControl;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -17,9 +19,9 @@ public class Finances {
 
     }
 
-   public static void getPlayerData() throws InputMismatchException {
+    public static void getPlayerData() throws FinancesControl {
 
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in); //change for log message
         System.out.println("Add a name for the new player: ");
         String namePlayer = scan.next();
 
@@ -28,6 +30,9 @@ public class Finances {
 
         System.out.println("Add current salary of the new player: ");
         float salaryPlayer = scan.nextFloat();
+        if (salaryPlayer <= 0) {
+            checkSalary(salaryPlayer);
+        }
 
         System.out.println("Name: " + namePlayer + "\n" + "Age: " + agePlayer + "\n" + "Salary: " + salaryPlayer);
 
@@ -63,6 +68,15 @@ public class Finances {
 
     public String transfers() {
         return "The club buy a new player";
+    }
+
+    //Finances control exception
+    static void checkSalary(float salary) throws FinancesControl {
+        if (salary <= 0) {
+            throw new FinancesControl("This player has no salary");
+        } else {
+            System.out.println("We have no debts with this player");
+        }
     }
 
 }

@@ -1,9 +1,9 @@
-package com.solvd.footballclub.model;
+package com.solvd.footballclub.generics;
 
 public class SponsorGen<Sponsor, Sponsor2, Sponsor3> {
-    Sponsor sp;
-    Sponsor sp2;
-    Sponsor sp3;
+    private Sponsor sp;
+    private Sponsor sp2;
+    private Sponsor sp3;
 
     public SponsorGen(Sponsor sp, Sponsor sp2, Sponsor sp3) {
         this.sp = sp;

@@ -1,9 +1,6 @@
 package com.solvd.footballclub.model;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 
 
 public class Fixture {
@@ -17,18 +14,6 @@ public class Fixture {
         this.matchDay = matchDay;
         this.nameReferee = nameReferee;
         this.nameOtherTeam = nameOtherTeam;
-    }
-
-    public static void getImage() {
-        //1st exception handle with images
-        try {
-            Image image = ImageIO.read(new File("src/main/resources/fixture.jpg"));
-            System.out.println(image.getGraphics());
-        } catch (IOException e) {
-            System.out.println("Image lost. There is no image in your folder");
-            e.printStackTrace();
-        }
-
     }
 
 

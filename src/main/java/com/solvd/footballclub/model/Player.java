@@ -1,5 +1,9 @@
 package com.solvd.footballclub.model;
 
+import com.solvd.footballclub.exceptions.PlayerAttendance;
+
+import java.util.ArrayList;
+
 public abstract class Player extends Person {
 
     private String fieldPosition;
@@ -18,14 +22,39 @@ public abstract class Player extends Person {
         this.weight = weight;
     }
 
+    public static void attendance() throws PlayerAttendance {
+        int counter = 0;
+        ArrayList<Boolean> attendance = new ArrayList<Boolean>();
+        attendance.add(true);
+        attendance.add(false);
+        attendance.add(false);
+        attendance.add(false);
+
+        for (int i = 0; i < attendance.size(); i++) {
+
+            System.out.println(attendance.get(i));
+            if(attendance.get(i) == false){
+                counter ++;
+            }
+
+        }
+        if(counter >= 3){
+            throw new PlayerAttendance("This player has too much faults");
+        }else{
+            System.out.println("no problem with this player, he is too professional");
+        }
+
+    }
+
+
     @Override
-    String listen() {
-        return "the player is lestening what his manager says";
+    public String listen() {
+        return "listening to his teammate";
     }
 
     @Override
-    String talk() {
-        return "the player is talking with his partner";
+    public String talk() {
+        return "talking to his teammate";
     }
 
     @Override
