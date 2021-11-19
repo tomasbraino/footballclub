@@ -1,10 +1,15 @@
 package com.solvd.footballclub.model;
 
+import com.solvd.footballclub.employees.TalentRecruiter;
 import com.solvd.footballclub.exceptions.PlayerAttendance;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
 public abstract class Player extends Person {
+
+    public static final Logger log = LogManager.getLogger(Player.class);
 
     private String fieldPosition;
     private int height;
@@ -32,7 +37,7 @@ public abstract class Player extends Person {
 
         for (int i = 0; i < attendance.size(); i++) {
 
-            System.out.println(attendance.get(i));
+           log.info(attendance.get(i));
             if(attendance.get(i) == false){
                 counter ++;
             }
@@ -41,7 +46,7 @@ public abstract class Player extends Person {
         if(counter >= 3){
             throw new PlayerAttendance("This player has too much faults");
         }else{
-            System.out.println("no problem with this player, he is too professional");
+            log.info("no problem with this player, he is too professional");
         }
 
     }

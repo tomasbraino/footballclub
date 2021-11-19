@@ -2,10 +2,15 @@ package com.solvd.footballclub.employees;
 
 import com.solvd.footballclub.exceptions.PlayerTransfer;
 import com.solvd.footballclub.model.Person;
+import com.solvd.footballclub.util.Main;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
 public class TalentRecruiter extends Person {
+
+    public static final Logger log = LogManager.getLogger(TalentRecruiter.class);
 
     private String countryResearch;
 
@@ -47,7 +52,18 @@ public class TalentRecruiter extends Person {
         this.countryResearch = countryResearch;
     }
 
+    //5th exception
     public static void talentTravel()throws PlayerTransfer{
+
+        TalentRecruiter rec = new TalentRecruiter("joe",21333,222,"england");
+
+        String country = rec.getCountryResearch();
+
+        if (country != "england"){
+            throw new PlayerTransfer("You are on the wrong place");
+        }else{
+            log.info("keep on the bussiness right there");
+        }
 
     }
 

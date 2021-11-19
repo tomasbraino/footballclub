@@ -1,11 +1,14 @@
 package com.solvd.footballclub.places;
 
 import com.solvd.footballclub.exceptions.FinancesControl;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Finances {
+
+    public static final Logger log = LogManager.getLogger(Finances.class);
 
     private Float budget;
     private int salaries;
@@ -22,19 +25,19 @@ public class Finances {
     public static void getPlayerData() throws FinancesControl {
 
         Scanner scan = new Scanner(System.in); //change for log message
-        System.out.println("Add a name for the new player: ");
+        log.info("Add a name for the new player: ");
         String namePlayer = scan.next();
 
-        System.out.println("Add an age for the new player: ");
+        log.info("Add an age for the new player: ");
         int agePlayer = scan.nextInt();
 
-        System.out.println("Add current salary of the new player: ");
+        log.info("Add current salary of the new player: ");
         float salaryPlayer = scan.nextFloat();
         if (salaryPlayer <= 0) {
             checkSalary(salaryPlayer);
         }
 
-        System.out.println("Name: " + namePlayer + "\n" + "Age: " + agePlayer + "\n" + "Salary: " + salaryPlayer);
+        log.info("Name: " + namePlayer + "\n" + "Age: " + agePlayer + "\n" + "Salary: " + salaryPlayer);
 
     }
 
@@ -75,7 +78,7 @@ public class Finances {
         if (salary <= 0) {
             throw new FinancesControl("This player has no salary");
         } else {
-            System.out.println("We have no debts with this player");
+            log.info("We have no debts with this player");
         }
     }
 
