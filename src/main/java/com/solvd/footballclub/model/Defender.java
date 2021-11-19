@@ -29,7 +29,7 @@ public class Defender extends Player implements Defense {
 
     @Override
     public int hashCode() {
-        return Objects.hash(defensePoints);
+        return super.hashCode() + defensePoints + tacklePoints;
     }
 
     @Override

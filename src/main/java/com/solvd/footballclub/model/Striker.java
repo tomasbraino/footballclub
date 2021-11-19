@@ -38,7 +38,7 @@ public class Striker extends Player implements Attack {
 
     @Override
     public int hashCode() {
-        return Objects.hash(pacePoints, shootPoints, dribblingPoints);
+        return super.hashCode() + shootPoints;
     }
 
     @Override

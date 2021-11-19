@@ -53,7 +53,7 @@ public class Club {
 
     @Override
     public int hashCode() {
-        return Objects.hash(actualDiv, pointsExp);
+        return name.hashCode() + actualDiv.hashCode();
     }
 
     @Override

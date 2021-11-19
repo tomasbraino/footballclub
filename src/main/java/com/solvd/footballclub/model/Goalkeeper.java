@@ -46,7 +46,7 @@ public class Goalkeeper extends Player implements GoalkeeperI {
 
     @Override
     public int hashCode() {
-        return Objects.hash(jumpPoints, positioning, footworkPoints);
+        return super.hashCode() + positioning;
     }
 
     @Override

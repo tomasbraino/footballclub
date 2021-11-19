@@ -27,7 +27,7 @@ public class Manager extends Person {
 
     @Override
     public int hashCode() {
-        return hashCode() + experience;
+        return super.hashCode() + experience;
     }
 
     @Override

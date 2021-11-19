@@ -28,7 +28,7 @@ public class Midfielder extends Player implements MidelFielderSkills {
 
     @Override
     public int hashCode() {
-        return Objects.hash(pacePoints, longPassPoints, dribblingPoints);
+        return super.hashCode() + pacePoints;
     }
 
 

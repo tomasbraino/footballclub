@@ -21,7 +21,7 @@ public class TalentRecruiter extends Person {
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(countryResearch);
+        return countryResearch.hashCode();
     }//Correct my hashCode() needs to be custom
 
     @Override

@@ -23,7 +23,7 @@ public class FirstTeam {
 
     @Override
     public int hashCode() {
-        return Objects.hash(avgPlayer);
+        return super.hashCode() + avgPlayer;
     }
 
     public int getNumPlayer() {
