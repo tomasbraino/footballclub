@@ -2,10 +2,15 @@ package com.solvd.footballclub.places;
 
 import com.solvd.footballclub.exceptions.FanMemership;
 import com.solvd.footballclub.interfaces.StadiumIn;
+import com.solvd.footballclub.model.Player;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Scanner;
 
 public class Stadium implements StadiumIn {
+
+    public static final Logger log = LogManager.getLogger(Stadium.class);
 
     private String name;
     private int capacity;
@@ -51,7 +56,7 @@ public class Stadium implements StadiumIn {
         boolean status = scan.nextBoolean();
 
         if (status) {
-            System.out.println("This fan can enter to the stadium");
+            log.info("This fan can enter to the stadium");
         } else {
             throw new FanMemership("this fan can not enter to the stadium");
         }

@@ -23,33 +23,12 @@ public class Club {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Club) {
-            Club other = (Club) obj;
-            if (this.pointsExp == ((Club) obj).pointsExp) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Club club = (Club) o;
+        return pointsExp == club.pointsExp && Objects.equals(name, club.name) && Objects.equals(actualDiv, club.actualDiv);
     }
-
-    public boolean equalsDivision(Object obj) {
-        if (obj instanceof Club) {
-            Club other = (Club) obj;
-            if (this.actualDiv == ((Club) obj).actualDiv) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-
-
 
     @Override
     public int hashCode() {

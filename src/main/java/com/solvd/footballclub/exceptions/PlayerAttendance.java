@@ -1,8 +1,8 @@
 package com.solvd.footballclub.exceptions;
 
-public class PlayerAttendance extends Exception{
+public class PlayerAttendance extends RuntimeException {
 
-    public PlayerAttendance(String message){
+    public PlayerAttendance(String message) {
         super(message);
     }
 }

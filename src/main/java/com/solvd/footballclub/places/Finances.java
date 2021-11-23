@@ -41,6 +41,16 @@ public class Finances {
 
     }
 
+    //Finances control exception
+    static void checkSalary(float salary) throws FinancesControl {
+        if (salary <= 0) {
+            throw new FinancesControl("This player has no salary");
+        } else {
+            log.info("We have no debts with this player");
+        }
+    }
+
+
     public Float getBudget() {
         return budget;
     }
@@ -73,13 +83,5 @@ public class Finances {
         return "The club buy a new player";
     }
 
-    //Finances control exception
-    static void checkSalary(float salary) throws FinancesControl {
-        if (salary <= 0) {
-            throw new FinancesControl("This player has no salary");
-        } else {
-            log.info("We have no debts with this player");
-        }
-    }
 
 }

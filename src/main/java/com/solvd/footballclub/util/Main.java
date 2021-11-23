@@ -58,34 +58,22 @@ public class Main {
         }
 
 
-        try { //1st Exception needs to be sorrounded by try & catch block
-            Finances.getPlayerData();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        //1st Exception needs to be sorrounded by try & catch block
+        Finances.getPlayerData();
 
         //2nd Exception. FanMemership is RunTimeException type and no need to be sorrounded by try and catch block
         Stadium stad = new Stadium("old trafford", 80000);
         stad.controlFans();
 
-
         //3rd Exception
-        try {
-            Player.attendance();
-        } catch (PlayerAttendance e) {
-            e.printStackTrace();
-        }
+        Player.attendance();
 
         //4th exception. RunTimeException
         Sector sec = new Sector("aa-44", 1233, 2222);
         sec.sectorControl();
 
         //5th exception
-        try {
-            TalentRecruiter.talentTravel();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        TalentRecruiter.talentTravel();
 
 
         //Generics
