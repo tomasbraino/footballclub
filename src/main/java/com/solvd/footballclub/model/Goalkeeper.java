@@ -41,12 +41,12 @@ public class Goalkeeper extends Player implements GoalkeeperI {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Goalkeeper that = (Goalkeeper) o;
-        return jumpPoints == that.jumpPoints && positioning == that.positioning && footworkPoints == that.footworkPoints;
+        return positioning == that.positioning && footworkPoints == that.footworkPoints;
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode() + positioning;
+        return super.hashCode() + positioning + footworkPoints;
     }
 
     @Override

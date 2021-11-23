@@ -60,5 +60,4 @@ public class Fans extends Person {
     }
 
 
-
 }

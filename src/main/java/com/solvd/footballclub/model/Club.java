@@ -27,7 +27,7 @@ public class Club {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Club club = (Club) o;
-        return pointsExp == club.pointsExp && Objects.equals(name, club.name) && Objects.equals(actualDiv, club.actualDiv);
+        return name == club.name && Objects.equals(actualDiv, club.actualDiv);
     }
 
     @Override
