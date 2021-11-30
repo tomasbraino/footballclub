@@ -10,6 +10,11 @@ public class ClothesRoom {
 
     }
 
+    //1st enum
+    enum Lockers{
+        LOCKER1, LOCKER2, LOCKER3;
+    }
+
     public String getName() {
         return name;
     }

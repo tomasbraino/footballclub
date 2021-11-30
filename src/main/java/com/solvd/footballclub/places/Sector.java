@@ -36,6 +36,12 @@ public class Sector {
 
     }
 
+    //3rd enum
+    enum Sectors{
+        SECTOR1, SECTOR2, SECTOR3;
+    }
+
+
 
     public String getName() {
         return name;

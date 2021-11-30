@@ -21,6 +21,11 @@ public class Stadium implements StadiumIn {
         this.capacity = capacity;
     }
 
+    //2nd enum
+    enum Places{
+        PITCH, GATE, BENCH, TUNNEL;
+    }
+
 
     public String getName() {
         return name;
