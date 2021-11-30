@@ -1,9 +1,12 @@
 package com.solvd.footballclub.model;
 
 import com.solvd.footballclub.interfaces.Training;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class SkillTrainer extends Person implements Training {
 
+    public static final Logger log = LogManager.getLogger(Player.class);
     private String specialist;
     private int yearExp;
 
@@ -31,17 +34,17 @@ public class SkillTrainer extends Person implements Training {
 
     @Override
     public void physicalSession() {
-        System.out.println("Today we must to run and go to the gym");
+       log.info("Today we must to run and go to the gym");
     }
 
     @Override
     public void basicSkills() {
-        System.out.println("Today's practice it's about basic skills");
+       log.info("Today's practice it's about basic skills");
     }
 
     @Override
     public void miniMatch() {
-        System.out.println("We are gonna play a mini match with the 2nd team");
+        log.info("We are gonna play a mini match with the 2nd team");
     }
 
     public String getSpecialist() {

@@ -1,11 +1,15 @@
 package com.solvd.footballclub.generics;
 
-public class PlayerGen<Player> {
+import com.solvd.footballclub.model.Player;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+public class PlayerGen<Player> {
+    public static final Logger log = LogManager.getLogger(com.solvd.footballclub.model.Player.class);
     private Player p;
 
     public void getPlayer(Player p) {
-        System.out.println(p);
+       log.info(p);
 
     }
 }

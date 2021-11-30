@@ -1,11 +1,14 @@
 package com.solvd.footballclub.model;
 
 import com.solvd.footballclub.interfaces.Attack;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
 public class Striker extends Player implements Attack {
 
+    public static final Logger log = LogManager.getLogger(Player.class);
     private int pacePoints;
     private int shootPoints;
     private int dribblingPoints;
@@ -58,17 +61,17 @@ public class Striker extends Player implements Attack {
 
     @Override
     public void freeKick() {
-        System.out.println("The team have a great oportunity to score with this specialist");
+        log.info("The team have a great oportunity to score with this specialist");
     }
 
     @Override
     public void shoot() {
-        System.out.println("The defenders respect this striker when he take the shoot");
+        log.info("The defenders respect this striker when he take the shoot");
     }
 
     @Override
     public void headBall() {
-        System.out.println("The striker hits the ball with his head");
+       log.info("The striker hits the ball with his head");
     }
 
     public void setPacePoints(int pacePoints) {

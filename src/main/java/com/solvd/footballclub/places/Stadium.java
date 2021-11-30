@@ -40,12 +40,12 @@ public class Stadium implements StadiumIn {
 
     @Override
     public void alertSound() {
-        System.out.println("Please evacuate the stadium");
+        log.info("Please evacuate the stadium");
     }
 
     @Override
     public void messageSound() {
-        System.out.println("The striker score!!! ");
+        log.info("The striker score!!! ");
     }
 
     @Override
@@ -65,6 +65,6 @@ public class Stadium implements StadiumIn {
 
     @Override
     public void security() {
-        System.out.println("Security on the pitch");
+        log.info("Security on the pitch");
     }
 }

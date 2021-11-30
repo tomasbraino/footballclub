@@ -2,10 +2,14 @@
 package com.solvd.footballclub.model;
 
 import com.solvd.footballclub.interfaces.MidelFielderSkills;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
 public class Midfielder extends Player implements MidelFielderSkills {
+
+    public static final Logger log = LogManager.getLogger(Player.class);
     private int pacePoints;
     private int longPassPoints;
     private int dribblingPoints;
@@ -34,22 +38,22 @@ public class Midfielder extends Player implements MidelFielderSkills {
 
     @Override
     public void possessionPass() {
-        System.out.println("the midelfielders are passing the ball with the possession tactic");
+        log.info("the midelfielders are passing the ball with the possession tactic");
     }
 
     @Override
     public void longPass() {
-        System.out.println("the midelfielders are passing the ball with the long technique");
+        log.info("the midelfielders are passing the ball with the long technique");
     }
 
     @Override
     public void shortPass() {
-        System.out.println("the midelfielders are passing with the short technique");
+        log.info("the midelfielders are passing with the short technique");
     }
 
     @Override
     public void defensivePosition() {
-        System.out.println("the midelfielders are defensive mode");
+        log.info("the midelfielders are defensive mode");
     }
 
     public int getPacePoints() {

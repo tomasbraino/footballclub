@@ -50,17 +50,17 @@ public class Defender extends Player implements Defense {
 
     @Override
     public void tackle() {
-        System.out.println("the defender is tackling the striker");
+        log.info("the defender is tackling the striker");
     }
 
     @Override
     public void holdTheStriker() {
-        System.out.println("the defender is holding the striker");
+        log.info("the defender is holding the striker");
     }
 
     @Override
     public void tacticalDefense() {
-        System.out.println("the defender has the tactical defense mode");
+        log.info("the defender has the tactical defense mode");
     }
 
     public int getDefensePoints() {
